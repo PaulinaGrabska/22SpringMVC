@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista produktów</title>
+</head>
+<body>
+
+    <h3>Lista wszystkich produktów</h3>
+
+    <table class="table table-bordered table-dark">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nazwa produktu</th>
+            <th scope="col">Cena produktu</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr th:each="product: ${products}">
+            <th scope="row"><span th:text="${products.indexOf(product)+1}"></span></th>
+            <td ><span th:text="${product.name}"></span></td>
+            <td><span th:text="${product.price}"></span></td>
+        </tr>
+    </tbody>
+    </table>
+
+
+</body>
+</html>

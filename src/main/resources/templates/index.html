@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title class="form">Produkty</title>
+    <style type="text/css">
+        .form {
+            padding-left: 2cm;
+            padding-right:20%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="form">
+<!--    <h2>Lista produktów</h2>-->
+<!--    <div class="form-group">-->
+<!--    <a href="/lista" kategoria="">Wyświetl wszystkie produkty</a></br>-->
+<!--    <a href="/lista?kategoria=spozywcze" kategoria="spozywcze">Wyświetl wszystkie produkty spozywcze</a></br>-->
+<!--    <a href="/lista?kategoria=domowe" kategoria="domowe" >Wyświetl wszystkie produkty domowe</a></br>-->
+<!--    <a href="/lista?kategoria=inne" kategoria="inne">Wyświetl wszystkie produkty inne</a></br>-->
+<!--    </div>-->
+<!--    </br>-->
+<!--    </br>-->
+
+    <h3>Dodaj produkt</h3>
+    <form method="post" action="/lista">
+        <div class="form-group">
+            <div class="form-row">
+            Wpisz nazwę produktu: <input th:type="text" class="form-control" name="nazwa" placeholder="Nazwa"></br>
+            Wpisz cene produktu: <input th:type="text" class="form-control" name="cena" placeholder="Cena [zł]"></br>
+            <input type="submit" class="btn btn-primary" value="Dodaj Produkt">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
