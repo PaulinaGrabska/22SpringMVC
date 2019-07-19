@@ -37,6 +37,7 @@ public class ProductController {
     public String showList(Model model){
 
         model.addAttribute("products", productRepository.getProdukty());
+        model.addAttribute("sumaCen", productRepository.sumAllPrices());
 
         return "list";
     }
@@ -48,6 +49,7 @@ public class ProductController {
     public String showTable(Model model){
 
         model.addAttribute("products", productRepository.getProdukty());
+        model.addAttribute("sumaCen", productRepository.sumAllPrices());
 
         return "table";
     }
